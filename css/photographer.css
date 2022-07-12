@@ -74,3 +74,10 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
+.photographer-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 150px ;
+}

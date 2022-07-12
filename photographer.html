@@ -13,24 +13,35 @@
     </header>
     <main id="main">
       <div class="photograph-header">
+        <div>
+          <h1 class="heading-name"></h1>
+          <h3 class="heading-text"></h2>
+          <h3 class="heading-sub"></h2>
+        </div>
+        <img class="heading-image" >
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <label class="heading-label"></label>
+        <select class="heading-select"></select>
+        
       </div>
     </main>
     <div id="contact_modal">
-			<div class="modal">
-				<header>
+      <div class="modal">
+        <header>
           <h2>Contactez-moi</h2>
+          
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
 				<form>
-					<div>
-						<label>Prénom</label>
+          <div>
+            <label>Prénom</label>
 						<input />
 					</div>
           <button class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
-    <script src="src/photographers.js"></script>
+    <script  src="src/photographer.js" type="module"></script>
+  
   </body>
 </html>
