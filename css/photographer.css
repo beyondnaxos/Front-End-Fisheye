@@ -1,3 +1,6 @@
+
+
+
 #contact_modal {
     display: none;
 }
@@ -6,6 +9,15 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heading-infos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact_button {
@@ -76,8 +88,27 @@ form input {
 }
 
 .photographer-img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 150px ;
+    border-radius: 100px;
 }
+
+.medias-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+
+.media-card {
+    height: 300px;
+    width: 300px;
+}
+
+.media-image, .media-video {
+    object-fit: cover;
+}
+

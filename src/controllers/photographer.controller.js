@@ -2,8 +2,10 @@
 
     await model.getPhotographer();
 
-    view.displayPhotographerInfo(model)
+    console.log(model);
 
+    view.displayPhotographerInfo(model)
+    view.displayMedia(model)
   }
 
   export default PhotographerController;
