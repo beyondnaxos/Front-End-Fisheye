@@ -1,4 +1,5 @@
 export default class VideoMedia {
+    
     constructor(elt){
         this.title = elt.title;
         this.video = elt.video;
@@ -16,5 +17,6 @@ export default class VideoMedia {
         </div>
         `
     }
+
 }
 

@@ -6,6 +6,7 @@
 
     view.displayPhotographerInfo(model)
     view.displayMedia(model)
+    
   }
 
   export default PhotographerController;
