@@ -30,7 +30,16 @@ class PhotographerModel {
   }
 
   orderMedias(property) {
-    
+    this.medias.sort((a, b) => {
+      if (property === "popularity") {
+        return b.likes - a.likes;
+      } else if (property === "date") {
+        return b.date - a.date;
+      } else if (property === "title") {
+        return b.title - a.title;
+      }
+    }
+    )
   }
 
   addLike(mediaId) {

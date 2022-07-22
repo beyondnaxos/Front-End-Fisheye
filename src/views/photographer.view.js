@@ -83,6 +83,7 @@ class PhotographerView {
       this.mediasContainer.innerHTML += multimedia.displayInList()
     });
   }
+
   displayLikes(photographer) {
 
     this.photographer = photographer;
@@ -104,9 +105,6 @@ class PhotographerView {
     this.headingInfosContainer.appendChild(this.countContainer)
 
   }
-
-  
-
 }
 
 export default PhotographerView;
