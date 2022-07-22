@@ -105,10 +105,60 @@ form input {
 
 .media-card {
     height: 300px;
-    width: 300px;
+    width: 350px;
 }
 
 .media-image, .media-video {
     object-fit: cover;
+}
+
+.figcaption-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #901C1C;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.count-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 367px;
+    height: 70px;
+    background-color: #DB8876;
+    position: fixed;
+    bottom: 0;
+    right: 38px;
+    border-radius: 5px 5px 0 0;
+}
+
+.likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.likes-count{
+font-size: 24px;
+}
+
+.heart {
+    width: 19px;
+    height: 18px;
+    order: 2;
+}
+
+
+.daily-price{
+    font-size: 24px;
+    line-height: 31px;
+    font-family: 'DM Sans';
+    font-weight: 500;
 }
 

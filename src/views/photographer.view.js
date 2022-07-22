@@ -32,7 +32,6 @@ class PhotographerView {
     this.mediaTitle = document.createElement('h2')
     this.mediaTitle.classList.add('media-title')
 
-
     // this.headerTitle.innerText = "Photographer";
     // this.heading.addEventListener("click", controller);
   }
@@ -72,7 +71,7 @@ class PhotographerView {
     this.inputSelect.appendChild(this.inputOptionThird);
   }
 
-  
+
   displayMedia(photographer) {
 
     this.photographer = photographer;
@@ -83,6 +82,27 @@ class PhotographerView {
       const multimedia = factory(media)
       this.mediasContainer.innerHTML += multimedia.displayInList()
     });
+  }
+  displayLikes(photographer) {
+
+    this.photographer = photographer;
+    this.totalLikes = photographer.totalLikes
+
+    this.countContainer = document.querySelector(".count-container")
+    this.likes = document.querySelector(".likes")
+    this.likesCount = document.querySelector(".likes-count")
+    this.dailyPrice = document.querySelector(".daily-price")
+    
+    
+    this.likesCount.innerHTML = `${this.totalLikes}`
+    this.dailyPrice.textContent = `${photographer.price}€ / jour`;
+
+    this.countContainer.appendChild(this.likes);
+    this.likes.appendChild(this.likesCount);
+
+    this.countContainer.appendChild(this.dailyPrice)
+    this.headingInfosContainer.appendChild(this.countContainer)
+
   }
 
 }

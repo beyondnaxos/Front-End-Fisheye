@@ -6,6 +6,7 @@
 
     view.displayPhotographerInfo(model)
     view.displayMedia(model)
+    view.displayLikes(model)
     
   }
 
