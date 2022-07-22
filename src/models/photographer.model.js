@@ -30,10 +30,17 @@ class PhotographerModel {
   }
 
   orderMedias(property) {
-  
+    
   }
 
   addLike(mediaId) {
+    this.medias.find(media => {
+      if (media.id === mediaId) {
+        media.likes++;
+        this.totalLikes++;
+      }
+    }
+    )
 
   }
 

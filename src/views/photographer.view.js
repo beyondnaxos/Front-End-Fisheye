@@ -105,6 +105,8 @@ class PhotographerView {
 
   }
 
+  
+
 }
 
 export default PhotographerView;

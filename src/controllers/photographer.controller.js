@@ -1,6 +1,7 @@
    const  PhotographerController = async (model, view) => {
 
     await model.getPhotographer();
+    
 
     console.log(model);
 
