@@ -78,7 +78,6 @@ class PhotographerView {
 
     this.photographer.medias.map(media => {
       this.mediaCard.setAttribute('onclick', `location.href='media.html?id=${media.id}'`)
-      // if video is true, display video instead of image and add video class
       const multimedia = factory(media)
       this.mediasContainer.innerHTML += multimedia.displayInList()
     });
