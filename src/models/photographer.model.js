@@ -53,6 +53,8 @@ class PhotographerModel {
 
   }
 
+  
+
 }
 
 export default PhotographerModel ;
