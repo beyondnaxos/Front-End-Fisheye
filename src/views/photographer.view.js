@@ -47,17 +47,13 @@ class PhotographerView {
     this.headingImg.classList.add('photographer-img')
     this.inputLabel.innerText = "Sort by"
     this.inputOptionFirst.innerText = "Popoularité"
+    this.inputOptionFirst.setAttribute('value', "popularity")
     this.inputOptionSecond.innerText = "Date"
+    this.inputOptionSecond.setAttribute('value', "date")
     this.inputOptionThird.innerText = "Prix"
     this.inputSelect.appendChild(this.inputOptionFirst)
     this.inputSelect.appendChild(this.inputOptionSecond)
     this.inputSelect.appendChild(this.inputOptionThird)
-    this.inputSelect.addEventListener("change", function (e) {
-      console.log(e.target.value);
-    }
-    )
-
-
 
     this.headingInfosContainer.appendChild(this.headingTitle);
     this.headingInfosContainer.appendChild(this.headingText);

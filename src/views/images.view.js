@@ -19,4 +19,5 @@ export default class ImageMedia {
         </figure>
         `
     }
+
 }

@@ -11,7 +11,7 @@ export default class VideoMedia {
         return `
         <figure>
        
-        <video class=" media-card media-video" width="300" height="300" controls>
+        <video class=" media-card media-video" width="300" height="300" src="../assets/medias/${this.id}/${this.video}" >
             <source  src="../assets/medias/${this.id}/${this.video}" type="video/mp4">
             Your browser does not support the video tag.
         </video>

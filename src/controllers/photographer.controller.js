@@ -1,14 +1,35 @@
-   const  PhotographerController = async (model, view) => {
+import Lightbox from '../utils/lightbox.js'
 
-    await model.getPhotographer();
-    
+const PhotographerController = async (model, view) => {
 
-    console.log(model);
+  await model.getPhotographer();
+  console.log(model);
 
-    view.displayPhotographerInfo(model)
+  view.displayPhotographerInfo(model)
+
+  const baseDisplay = (model) => {
     view.displayMedia(model)
     view.displayLikes(model)
-    
+    Lightbox.init()
   }
 
-  export default PhotographerController;
+  baseDisplay(model)
+
+
+
+  console.log(model.medias);
+
+  view.inputSelect.addEventListener("change", function (e) {
+    model.orderMedias(e.target.value)
+    baseDisplay(model)
+    console.log(model);
+  }
+  )
+  
+
+
+  
+  console.log('clg de model');
+}
+
+export default PhotographerController;
