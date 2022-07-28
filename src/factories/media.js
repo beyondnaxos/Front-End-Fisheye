@@ -10,15 +10,15 @@ export default function factory(data) {
 }
 
 export function factoryLB(url) {
+
     const urlArray = url.split('.')
-    const ext = urlArray[urlArray.length - 1]
-    console.log('clg durl');
-    console.log(url);
-    if (ext === 'mp4') {
-        return ` <video class=" media-card media-video" width="300" height="300" controls>
-            <source  src="${url}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>`
+    const splitResult = urlArray[urlArray.length - 1]
+
+    if (splitResult === 'mp4') {
+        return `<video class=" media-card media-video" width="300" height="300" controls>
+                <source  src="${url}" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>`
 
     } else {
         return `<img src="${url}" alt="">`
