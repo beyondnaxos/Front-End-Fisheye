@@ -22,12 +22,9 @@ const PhotographerController = async (model, view) => {
   view.inputSelect.addEventListener("change", function (e) {
     model.orderMedias(e.target.value)
     baseDisplay(model)
-    console.log(model);
+    console.log(model)
   }
   )
-  
-
-
   
   console.log('clg de model');
 }

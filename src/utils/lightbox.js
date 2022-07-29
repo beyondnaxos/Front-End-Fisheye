@@ -102,5 +102,4 @@ class Lightbox {
 
 export default Lightbox
 
-
     // ${factoryLB(url)}
