@@ -40,13 +40,7 @@ class PhotographerModel {
       }
     }
     )
-    
   }
-
-
-  
-
-
 
   addLike(mediaId) {
     this.medias.find(media => {
@@ -56,11 +50,7 @@ class PhotographerModel {
       }
     }
     )
-
   }
-
-  
-
 }
 
 export default PhotographerModel ;

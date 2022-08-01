@@ -15,8 +15,6 @@ const PhotographerController = async (model, view) => {
 
   baseDisplay(model)
 
-
-
   console.log(model.medias);
 
   view.inputSelect.addEventListener("change", function (e) {

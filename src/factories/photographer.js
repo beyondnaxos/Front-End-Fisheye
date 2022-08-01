@@ -12,6 +12,7 @@ export function photographerFactory(data) {
 
         const img = document.createElement('img');
         img.setAttribute("src", picture)
+        img.setAttribute("aria-label", `photo de ${name}`)
 
         const h2 = document.createElement('h2');
         h2.textContent = name;

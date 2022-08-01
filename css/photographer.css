@@ -1,14 +1,26 @@
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 #contact_modal {
     display: none;
 }
+header {
+    width :90%;
+}
+ #main, .medias-container {
+    width: 80%;
+}
 
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
-    margin: 0 100px;
+    /* margin: 0 100px; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -97,9 +109,10 @@ form input {
 .medias-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+   gap: 50px;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 50px;
    
 }
 
@@ -110,6 +123,7 @@ form input {
 
 .media-image, .media-video {
     object-fit: cover;
+    object-position: top;
 }
 
 .figcaption-container{
@@ -121,6 +135,7 @@ form input {
     color: #901C1C;
     font-weight: 400;
     margin-top: -10px;
+    
 }
 
 .count-container {
@@ -251,4 +266,31 @@ font-size: 24px;
 .lightbox.fadeOut {
    
     opacity: 0;
+}
+
+figure {
+    margin: 0;
+    width: 350px;
+}
+
+select {
+    background: #901C1C ;
+    color: white;
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    
+}
+.sort-container {
+    margin-top: 30px;
+}
+.sort-label {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select:focus {
+   
 }

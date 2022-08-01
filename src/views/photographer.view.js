@@ -31,7 +31,7 @@ class PhotographerView {
 
     this.mediaTitle = document.createElement('h2')
     this.mediaTitle.classList.add('media-title')
-
+    
     // this.headerTitle.innerText = "Photographer";
     // this.heading.addEventListener("click", controller);
   }
@@ -45,9 +45,11 @@ class PhotographerView {
     this.headingImg.setAttribute('src', `../../assets/photographers/${photographer.portrait}`)
     this.headingImg.setAttribute('alt', photographer.name)
     this.headingImg.classList.add('photographer-img')
-    this.inputLabel.innerText = "Sort by"
+    this.inputLabel.innerText = "Trier par"
+    this.inputLabel.classList.add('sort-label')
     this.inputOptionFirst.innerText = "Popoularité"
     this.inputOptionFirst.setAttribute('value', "popularity")
+    this.inputOptionFirst.classList.add('popularity')
     this.inputOptionSecond.innerText = "Date"
     this.inputOptionSecond.setAttribute('value', "date")
     this.inputOptionThird.innerText = "Prix"
