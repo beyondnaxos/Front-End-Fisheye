@@ -1,15 +1,13 @@
 export default class VideoMedia {
-    
-    constructor(elt){
-        this.title = elt.title;
-        this.video = elt.video;
-        this.likes = elt.likes;
-        this.id = elt.photographerId
-    }
+  constructor(elt) {
+    this.title = elt.title;
+    this.video = elt.video;
+    this.likes = elt.likes;
+    this.id = elt.photographerId;
+  }
 
-    displayInList(){
-        return `
-        <figure>
+  displayInList() {
+    return `<figure>
        
         <video class=" media-card media-video" width="300" height="300" src="../assets/medias/${this.id}/${this.video}" >
             <source  src="../assets/medias/${this.id}/${this.video}" type="video/mp4">
@@ -21,8 +19,6 @@ export default class VideoMedia {
         <p class='media-likes-count'>${this.likes} <3</p>
         </div>
         </figure>
-        `
-    }
-
+        `;
+  }
 }
-

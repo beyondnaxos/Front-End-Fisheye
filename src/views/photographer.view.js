@@ -49,10 +49,11 @@ class PhotographerView {
     this.inputLabel.classList.add('sort-label')
     this.inputOptionFirst.innerText = "Popoularité"
     this.inputOptionFirst.setAttribute('value', "popularity")
-    this.inputOptionFirst.classList.add('popularity')
+    this.inputOptionFirst.classList.add('popularité')
     this.inputOptionSecond.innerText = "Date"
     this.inputOptionSecond.setAttribute('value', "date")
     this.inputOptionThird.innerText = "Prix"
+    this.inputOptionThird.setAttribute('value', "price")
     this.inputSelect.appendChild(this.inputOptionFirst)
     this.inputSelect.appendChild(this.inputOptionSecond)
     this.inputSelect.appendChild(this.inputOptionThird)

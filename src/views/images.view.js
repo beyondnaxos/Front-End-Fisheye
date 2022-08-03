@@ -7,8 +7,7 @@ export default class ImageMedia {
     }
 
     displayInList(){
-        return `
-        <figure>
+        return `<figure>
         
             <img class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
         

@@ -29,19 +29,6 @@ class PhotographerModel {
       , 0)
   }
 
-  orderMedias(property) {
-    this.medias.sort((a, b) => {
-      if (property === "popularité") {
-        return b.likes - a.likes;
-      } else if (property === "date") {
-        return b.date - a.date;
-      } else if (property === "prix") {
-        return b.price - a.price;
-      }
-    }
-    )
-  }
-
   addLike(mediaId) {
     this.medias.find(media => {
       if (media.id === mediaId) {
