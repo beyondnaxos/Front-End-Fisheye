@@ -1,4 +1,5 @@
 import Lightbox from '../utils/lightbox.js'
+import Sort from '../utils/sort.js';
 
 const PhotographerController = async (model, view) => {
 
@@ -11,18 +12,14 @@ const PhotographerController = async (model, view) => {
     view.displayMedia(model)
     view.displayLikes(model)
     Lightbox.init()
+    Sort.init()
   }
 
   baseDisplay(model)
 
   console.log(model.medias);
 
-  view.inputSelect.addEventListener("change", function (e) {
-    model.orderMedias(e.target.value)
-    baseDisplay(model)
-    console.log(model)
-  }
-  )
+  
   
   console.log('clg de model');
 }

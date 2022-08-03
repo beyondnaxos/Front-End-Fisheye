@@ -2,7 +2,6 @@ import { factoryLB } from '../factories/media.js';
 
 class Lightbox {
   static init() {
-    // const links = Array.from(document.querySelectorAll('img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"], img[src$=".gif"], video[src$=".mp4"]'))
     const links = Array.from(
       document.querySelectorAll(
         'img:not(.logo):not(.heading-image):not(.close):not(.heart), video'
@@ -20,20 +19,16 @@ class Lightbox {
       })
     );
   }
-  /*
-    @param {string} url  url de l'image à afficher
-    */
 
   constructor(url, gallery) {
     this.element = this.buildDOM(url);
     this.gallery = gallery;
     if (url.endsWith('.mp4')) {
       this.loadVideo(url);
-    }
-    else {
+    } else {
       this.loadImage(url);
     }
-    // this.loadImage(url);
+
     this.onKeyUp = this.onKeyUp.bind(this);
     document.body.appendChild(this.element);
     document.addEventListener('keyup', this.onKeyUp);
@@ -53,11 +48,8 @@ class Lightbox {
       container.appendChild(image);
       this.url = url;
     };
-    // container.innerHTML = factoryLB(url);
     image.src = url;
-    // console.log(factoryLB(url));
   }
-
 
   loadVideo(url) {
     this.url = null;
@@ -67,18 +59,10 @@ class Lightbox {
     loader.classList.add('lightbox__loader');
     container.innerHTML = '';
     container.appendChild(loader);
-
-    // replace container's child loader with video
-    const refresher = () => {  
-    container.replaceChildren( video );
-    }
-
+    const refresher = () => {
+      container.replaceChildren(video);
+    };
     video.onloadeddata = refresher;
-    // video.onloadeddata = () => {
-    //     container.removeChild(loader);
-    //     container.appendChild(video);
-        
-    //     }
     video.setAttribute('src', url);
     video.setAttribute('controls', true);
     video.setAttribute('autoplay', true);
@@ -87,46 +71,40 @@ class Lightbox {
     video.setAttribute('playsinline', true);
     video.setAttribute('preload', 'auto');
     video.setAttribute('webkit-playsinline', true);
-    // // container.innerHTML = factoryLB(url);
     this.url = url;
     video.src = url;
-    // add source item 
     video.innerHTML = `<source src="${url}" type="video/mp4">`;
-}
+  }
 
   next(e) {
     e.preventDefault();
     console.log(this.gallery);
-    let i = this.gallery.findIndex(image => image === this.url);
-    
+    let i = this.gallery.findIndex((image) => image === this.url);
+
     if (i === this.gallery.length - 1) {
       i = -1;
     }
-    if(this.gallery[i + 1].endsWith('.mp4')) {
+    if (this.gallery[i + 1].endsWith('.mp4')) {
       this.loadVideo(this.gallery[i + 1]);
-    }
-    else {
+    } else {
       this.loadImage(this.gallery[i + 1]);
     }
-    
+
     console.log(i);
   }
 
-
   prev(e) {
     e.preventDefault();
-    console.log(this.gallery)
-    let i = this.gallery.findIndex(image => image === this.url)
+    console.log(this.gallery);
+    let i = this.gallery.findIndex((image) => image === this.url);
     if (i === 0) {
-      i =  this.gallery.length;
+      i = this.gallery.length;
     }
-    if(this.gallery[i - 1].endsWith('.mp4')) {
+    if (this.gallery[i - 1].endsWith('.mp4')) {
       this.loadVideo(this.gallery[i - 1]);
-    }
-    else {
+    } else {
       this.loadImage(this.gallery[i - 1]);
     }
-    
   }
 
   onKeyUp(e) {
@@ -134,10 +112,6 @@ class Lightbox {
       this.close(e);
     }
   }
-
-  /*
-    @param {mouseEvent}
-    */
 
   close(e) {
     e.preventDefault();
@@ -148,10 +122,6 @@ class Lightbox {
     document.removeEventListener('keyup', this.onKeyUp);
   }
 
-  /*
-    @param {string} url  url de l'image à afficher
-    @return {HTMLElement} element de la lightbox
-    */
   buildDOM(url) {
     const dom = document.createElement('div');
     dom.classList.add('lightbox');
@@ -160,7 +130,7 @@ class Lightbox {
             <button class="lightbox__next">Suivant</button>
             <button class="lightbox__prev">Précédent</button>
             <div class="lightbox__container">
-            </div>`
+            </div>`;
     dom
       .querySelector('.lightbox__close')
       .addEventListener('click', this.close.bind(this));
