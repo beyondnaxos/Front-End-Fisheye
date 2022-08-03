@@ -294,3 +294,12 @@ select {
 select:focus {
    
 }
+
+/* add hear.svg on .heartLike */
+.heartLike {
+    background: url(../assets/icons/heart.svg) center center / 100% 100% no-repeat;
+    border: none;
+    width: 19px;
+    height: 18px;
+    order: 2;
+}

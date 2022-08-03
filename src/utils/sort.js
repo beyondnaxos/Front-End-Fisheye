@@ -1,3 +1,4 @@
+// import heart.svg 
 
 class Sort {
   static init(e, mediasFromView) {

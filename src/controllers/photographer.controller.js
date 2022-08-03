@@ -20,6 +20,7 @@ const PhotographerController = async (model, view) => {
 
   view.inputSelect.addEventListener("change", function (e) {
     Sort.init(e, model.medias)
+    Lightbox.init()
   }
   )
   
