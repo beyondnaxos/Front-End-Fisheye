@@ -24,5 +24,6 @@ const init = async () => {
     displayData(photographers);
 };
 
+
 init();
 

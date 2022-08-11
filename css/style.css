@@ -11,17 +11,20 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 120px;
 }
 
 h1 {
     color: #901C1C;
-    margin-right: 100px;
+   
 }
 
 .logo {
     height: 50px;
-    margin-left: 100px;
+    margin-top: 20px;
+    
+    
+
 }
 
 .photographer_section {
@@ -29,6 +32,7 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
     margin-top: 50px;
+    width: 1240px;
 }
 
 .photographer_section article {

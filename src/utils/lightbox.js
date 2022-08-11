@@ -4,7 +4,7 @@ class Lightbox {
   static init() {
     const links = Array.from(
       document.querySelectorAll(
-        'img:not(.logo):not(.heading-image):not(.close):not(.heart), video'
+        'img:not(.logo):not(.heading-image):not(.close):not(.heart):not(.heart-icon), video'
       )
     );
     console.log(links);

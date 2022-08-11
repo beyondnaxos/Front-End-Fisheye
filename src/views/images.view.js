@@ -13,7 +13,8 @@ export default class ImageMedia {
         
             <div class='figcaption-container'>
             <figcaption>${this.title}</figcaption>
-            <p class='media-likes-count'>${this.likes} <3</p>
+            <p class='media-likes-count'>${this.likes}</p>
+            <img src='../assets/icons/heart.svg' class='heart-icon' alt='heart'>
             </div>
         </figure>
         `
