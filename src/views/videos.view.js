@@ -9,7 +9,7 @@ export default class VideoMedia {
   displayInList() {
     return `<figure>
        
-        <video class=" media-card media-video" width="300" height="300" src="../assets/medias/${this.id}/${this.video}" >
+        <video class=" media-card media-video" width="300" height="300" alt=${this.title} src="../assets/medias/${this.id}/${this.video}" >
             <source  src="../assets/medias/${this.id}/${this.video}" type="video/mp4">
             Your browser does not support the video tag.
         </video>

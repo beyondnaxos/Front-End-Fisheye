@@ -10,23 +10,25 @@ class Lightbox {
     console.log(links);
     const gallery = links.map((link) => link.getAttribute('src'));
     console.log(gallery);
+    const alts = links.map((link) => link.getAttribute('alt'));
 
     links.forEach((link) =>
       link.addEventListener('click', (e) => {
         e.preventDefault();
         console.log(link);
-        new Lightbox(e.currentTarget.getAttribute('src'), gallery);
+        new Lightbox(e.currentTarget.getAttribute('src'), gallery, alts , e.currentTarget.getAttribute('alt') , alts);
       })
     );
   }
 
-  constructor(url, gallery) {
+  constructor(url, gallery, alts, alt) {
     this.element = this.buildDOM(url);
     this.gallery = gallery;
+    this.alts = alts;
     if (url.endsWith('.mp4')) {
-      this.loadVideo(url);
+      this.loadVideo(url, alt);
     } else {
-      this.loadImage(url);
+      this.loadImage(url, alt);
     }
 
     this.onKeyUp = this.onKeyUp.bind(this);
@@ -34,33 +36,52 @@ class Lightbox {
     document.addEventListener('keyup', this.onKeyUp);
   }
 
-  loadImage(url) {
+  loadImage(url, alt) {
+    this.alt = alt;
     this.url = null;
     const image = new Image();
     const container = this.element.querySelector('.lightbox__container');
     const loader = document.createElement('div');
+    const caption = document.createElement('p');
+    const figContainer = document.createElement('div');
+    figContainer.appendChild(image);
+    caption.classList.add('lightbox__caption');
+    figContainer.appendChild(caption);
+    caption.innerHTML = this.alt;
     loader.classList.add('lightbox__loader');
     container.innerHTML = '';
     container.appendChild(loader);
     console.log(url);
     image.onload = () => {
       container.removeChild(loader);
-      container.appendChild(image);
+      container.appendChild(figContainer);
       this.url = url;
+      this.alt = alt;
     };
     image.src = url;
   }
 
-  loadVideo(url) {
+  loadVideo(url, alt) {
+    this.alt = alt;
     this.url = null;
+    console.log(this.alt);
     const video = document.createElement('video');
     const container = this.element.querySelector('.lightbox__container');
     const loader = document.createElement('div');
+    const caption = document.createElement('p');
+    caption.classList.add('lightbox__caption');
+    const figContainer = document.createElement('div');
+    figContainer.appendChild(video);
+    figContainer.appendChild(caption);
+    caption.innerHTML = this.alt;
     loader.classList.add('lightbox__loader');
     container.innerHTML = '';
     container.appendChild(loader);
     const refresher = () => {
-      container.replaceChildren(video);
+      container.replaceChildren(figContainer);
+      this.alt = alt;
+      this.url =url
+  
     };
     video.onloadeddata = refresher;
     video.setAttribute('src', url);
@@ -71,6 +92,7 @@ class Lightbox {
     video.setAttribute('playsinline', true);
     video.setAttribute('preload', 'auto');
     video.setAttribute('webkit-playsinline', true);
+    video.setAttribute('alt' , alt);
     this.url = url;
     video.src = url;
     video.innerHTML = `<source src="${url}" type="video/mp4">`;
@@ -80,16 +102,18 @@ class Lightbox {
     e.preventDefault();
     console.log(this.gallery);
     let i = this.gallery.findIndex((image) => image === this.url);
+    
 
     if (i === this.gallery.length - 1) {
       i = -1;
     }
-    if (this.gallery[i + 1].endsWith('.mp4')) {
-      this.loadVideo(this.gallery[i + 1]);
-    } else {
-      this.loadImage(this.gallery[i + 1]);
-    }
 
+  
+    if (this.gallery[i + 1].endsWith('.mp4')) {
+      this.loadVideo(this.gallery[i + 1], this.alts[i + 1]);
+    } else {
+      this.loadImage(this.gallery[i + 1], this.alts[i + 1]);
+    }
     console.log(i);
   }
 
@@ -101,11 +125,12 @@ class Lightbox {
       i = this.gallery.length;
     }
     if (this.gallery[i - 1].endsWith('.mp4')) {
-      this.loadVideo(this.gallery[i - 1]);
+      this.loadVideo(this.gallery[i - 1], this.alts[i - 1]);
     } else {
-      this.loadImage(this.gallery[i - 1]);
+      this.loadImage(this.gallery[i - 1], this.alts[i - 1]);
     }
   }
+
 
   onKeyUp(e) {
     if (e.key === 'Escape') {

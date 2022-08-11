@@ -263,6 +263,15 @@ font-size: 24px;
     background: url(../assets/icons/loader.svg) center center / 100% 100% no-repeat;
 }
 
+.lightbox__caption {
+    font-size: 24px;
+    line-height: 31px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    color: #901C1C;
+    
+}
+
 .lightbox.fadeOut {
    
     opacity: 0;
