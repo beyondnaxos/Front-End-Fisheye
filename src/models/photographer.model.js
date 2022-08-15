@@ -29,15 +29,10 @@ class PhotographerModel {
       , 0)
   }
 
-  addLike(mediaId) {
-    this.medias.find(media => {
-      if (media.id === mediaId) {
-        media.likes++;
-        this.totalLikes++;
-      }
-    }
-    )
-  }
+  
+
 }
+
+
 
 export default PhotographerModel ;

@@ -103,6 +103,12 @@ class PhotographerView {
     this.headingInfosContainer.appendChild(this.countContainer)
 
   }
+
+
+
+
+
+
 }
 
 export default PhotographerView;
