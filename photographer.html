@@ -57,24 +57,38 @@
           
           <img src="assets/icons/close.svg" class='close' onclick="closeModal()" />
         </header>
-				<form>
+
+
+				<form class='contact-form' action="" method="get">
           <div>
-            <label>Prénom</label>
-						<input type="text" />
+            <label for="firstname">Prénom</label>
+						<input 
+            id="firstname" 
+            name='firstname' 
+            type="text" />
 					</div>
           <div>
-            <label>Nom</label>
-						<input type="text" />
+            <label for='name'>Nom</label>
+						<input 
+            id="name"
+            name='name' 
+            type="text" />
 					</div>
           <div>
-            <label>Email</label>
-						<input type="email" />
+            <label for="email">Email</label>
+						<input 
+            id="email"
+            name="email"
+            type="email" />
 					</div>
           <div>
-            <label>Message</label>
-						<input type="text" />
+            <label for='message'>Message</label>
+						<input 
+            id="message"
+            name="message" 
+            type="text" />
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <button type='submit' id='form-button' class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
