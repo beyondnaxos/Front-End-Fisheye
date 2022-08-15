@@ -1,36 +1,36 @@
-// import heart.svg 
+// import heart.svg
 
 class Sort {
   static init(e, mediasFromView) {
-    const mediaContainer = document.querySelector('.medias-container');
-    const medias = mediasFromView;
-    const property = e.target.value;
-    const sort = new Sort(medias, property, mediaContainer);
-    console.log(medias);
-    sort.sortBy(property);
-    console.log(medias);
-    sort.display();
+    const mediaContainer = document.querySelector('.medias-container')
+    const medias = mediasFromView
+    const property = e.target.value
+    const sort = new Sort(medias, property, mediaContainer)
+    console.log(medias)
+    sort.sortBy(property)
+    console.log(medias)
+    sort.display()
   }
 
   constructor(medias, property, mediaContainer) {
-    this.medias = medias;
-    this.property = property;
-    this.mediaContainer = mediaContainer;
+    this.medias = medias
+    this.property = property
+    this.mediaContainer = mediaContainer
   }
 
   sortBy(property) {
     if (property === 'popularity') {
       this.medias.sort((a, b) => {
-        return b.likes - a.likes;
-      });
+        return b.likes - a.likes
+      })
     } else if (property === 'date') {
       this.medias.sort((a, b) => {
-        return new Date(b.date) - new Date(a.date);
-      });
+        return new Date(b.date) - new Date(a.date)
+      })
     } else if (property === 'price') {
       this.medias.sort((a, b) => {
-        return b.price - a.price;
-      });
+        return b.price - a.price
+      })
     }
   }
 
@@ -65,10 +65,8 @@ class Sort {
     this.mediaContainer.innerHTML = ''
     this.medias.forEach((media) => {
       this.mediaContainer.innerHTML += this.buildDom(media)
-    });
+    })
   }
-
-  
 }
 
-export default Sort;
+export default Sort

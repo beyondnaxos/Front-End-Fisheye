@@ -1,9 +1,9 @@
 export default class VideoMedia {
   constructor(elt) {
-    this.title = elt.title;
-    this.video = elt.video;
-    this.likes = elt.likes;
-    this.id = elt.photographerId;
+    this.title = elt.title
+    this.video = elt.video
+    this.likes = elt.likes
+    this.id = elt.photographerId
   }
 
   displayInList() {
@@ -20,6 +20,6 @@ export default class VideoMedia {
         <img src='../assets/icons/heart.svg' class='heart-icon' alt='heart'>
         </div>
         </figure>
-        `;
+        `
   }
 }

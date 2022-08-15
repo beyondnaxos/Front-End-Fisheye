@@ -1,13 +1,13 @@
 export default class ImageMedia {
-    constructor(elt){
-        this.title = elt.title;
-        this.image = elt.image;
-        this.likes = elt.likes;
-        this.id = elt.photographerId
-    }
+  constructor(elt) {
+    this.title = elt.title
+    this.image = elt.image
+    this.likes = elt.likes
+    this.id = elt.photographerId
+  }
 
-    displayInList(){
-        return `<figure>
+  displayInList() {
+    return `<figure>
         
             <img class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
         
@@ -18,7 +18,5 @@ export default class ImageMedia {
             </div>
         </figure>
         `
-    }
-
+  }
 }
-

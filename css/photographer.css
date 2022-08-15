@@ -1,4 +1,3 @@
-
 body {
     display: flex;
     flex-direction: column;
@@ -9,13 +8,15 @@ body {
 #contact_modal {
     display: none;
 }
+
 header {
-    width :1240px;
+    width: 1240px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
- #main, .medias-container {
+
+#main, .medias-container {
     width: 1240px;
 }
 
@@ -50,7 +51,7 @@ header {
 
 .modal {
     border-radius: 5px;
-   row-gap: 30px;
+    row-gap: 30px;
     background-color: #DB8876;
     width: 669px;
     height: auto;
@@ -76,7 +77,7 @@ header {
     font-size: 64px;
     font-weight: normal;
     text-align: left;
-    
+
 }
 
 form {
@@ -116,11 +117,11 @@ form input {
 .medias-container {
     display: flex;
     flex-direction: row;
-   gap: 50px;
+    gap: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
-   margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 .media-card {
@@ -133,7 +134,7 @@ form input {
     object-position: top;
 }
 
-.figcaption-container{
+.figcaption-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -143,14 +144,14 @@ form input {
     font-weight: 400;
     margin-top: -10px;
     font-size: 24px;
-    
+
 }
 
 
 figcaption {
     display: block;
     overflow: hidden;
-    width: 270px;   
+    width: 270px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -176,8 +177,8 @@ figcaption {
     column-gap: 10px;
 }
 
-.likes-count{
-font-size: 24px;
+.likes-count {
+    font-size: 24px;
 }
 
 .heart {
@@ -187,7 +188,7 @@ font-size: 24px;
 }
 
 
-.daily-price{
+.daily-price {
     font-size: 24px;
     line-height: 31px;
     font-family: 'DM Sans';
@@ -202,10 +203,10 @@ font-size: 24px;
     height: 100%;
     background-color: rgba(255, 255, 255, 1);
     z-index: 10;
-    animation : lightboxIn 500ms ;
+    animation: lightboxIn 500ms;
 }
 
-.lightbox__next , .lightbox__prev {
+.lightbox__next, .lightbox__prev {
     background: url(../assets/icons/chevronR.svg) center center / 60px 60px no-repeat;
     border: none;
     width: 50px;
@@ -231,10 +232,10 @@ font-size: 24px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  }
+}
 
 .lightbox__close {
-    background: url(../assets/icons/close2.svg) center center / 100% 100%  no-repeat;
+    background: url(../assets/icons/close2.svg) center center / 100% 100% no-repeat;
     border: none;
     position: fixed;
     right: 50px;
@@ -254,24 +255,30 @@ font-size: 24px;
 .lightbox button {
     opacity: .5;
     cursor: pointer;
-    transition:  opacity 300ms;
+    transition: opacity 300ms;
     text-indent: -10000px;
 }
 
 .lightbox button:hover {
     opacity: 1;
 }
+
 .lightbox__container img, .lightbox__container video {
     max-width: 100%;
     height: 800px;
-    animation : lightboxIn 500ms ;
+    animation: lightboxIn 500ms;
     border-radius: 10px;
     /* object-fit: cover; */
 }
 
 @keyframes lightboxIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .lightbox__loader {
@@ -287,11 +294,11 @@ font-size: 24px;
     font-family: 'DM Sans';
     font-weight: 500;
     color: #901C1C;
-    
+
 }
 
 .lightbox.fadeOut {
-   
+
     opacity: 0;
 }
 
@@ -301,26 +308,26 @@ figure {
 }
 
 select {
-    background: #901C1C ;
+    background: #901C1C;
     color: white;
     height: 35px;
     width: 100px;
     border: none;
     border-radius: 5px;
-    
+
 }
+
 .sort-container {
     margin-top: 30px;
 }
+
 .sort-label {
     color: black;
     font-weight: bold;
     margin-right: 10px;
 }
 
-select:focus {
-   
-}
+select:focus {}
 
 /* add hear.svg on .heartLike */
 .heartLike {
@@ -334,5 +341,5 @@ select:focus {
 .heart-icon {
     width: 25px;
     height: 25px;
-    
+
 }

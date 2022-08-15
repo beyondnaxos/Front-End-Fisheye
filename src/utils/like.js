@@ -7,7 +7,11 @@ class Like {
         const parent = heartIcon.parentElement
         const mediaLikesCount = parent.querySelector('.media-likes-count')
         const getLikesCount = mediaLikesCount.innerHTML
-        Like.like(e.currentTarget.getAttribute('data-id'), getLikesCount, mediaLikesCount)
+        Like.like(
+          e.currentTarget.getAttribute('data-id'),
+          getLikesCount,
+          mediaLikesCount
+        )
       })
     })
   }
@@ -25,6 +29,5 @@ class Like {
     likesCount.innerHTML = parseInt(likesCount.innerHTML) + 1
     mediaLikesCount.innerHTML = parseInt(mediaLikesCount.innerHTML) + 1
   }
-
 }
 export default Like
