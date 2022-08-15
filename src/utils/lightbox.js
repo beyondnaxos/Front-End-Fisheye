@@ -38,8 +38,13 @@ class Lightbox {
     }
 
     this.onKeyUp = this.onKeyUp.bind(this)
+    this.onKeyLeft = this.onKeyLeft.bind(this)
+    this.onKeyRight = this.onKeyRight.bind(this)
+
     document.body.appendChild(this.element)
     document.addEventListener('keyup', this.onKeyUp)
+    document.addEventListener('keyup', this.onKeyLeft)
+    document.addEventListener('keyup', this.onKeyRight)
   }
 
   loadImage(url, alt) {
@@ -140,6 +145,20 @@ class Lightbox {
     }
   }
 
+  onKeyLeft(e) {
+    if (e.key === 'ArrowLeft') {
+      this.prev(e)
+    }
+  }
+
+  onKeyRight(e) {
+    if (e.key === 'ArrowRight') {
+      this.next(e)
+    }
+  }
+
+
+
   close(e) {
     e.preventDefault()
     this.element.classList.add('fadeOut')
@@ -161,6 +180,7 @@ class Lightbox {
     dom
       .querySelector('.lightbox__close')
       .addEventListener('click', this.close.bind(this))
+      
     dom
       .querySelector('.lightbox__next')
       .addEventListener('click', this.next.bind(this))
