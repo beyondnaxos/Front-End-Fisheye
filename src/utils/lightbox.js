@@ -1,4 +1,3 @@
-import { factoryLB } from '../factories/media.js'
 
 class Lightbox {
   static init() {
@@ -36,15 +35,9 @@ class Lightbox {
     } else {
       this.loadImage(url, alt)
     }
-
     this.onKeyUp = this.onKeyUp.bind(this)
-    this.onKeyLeft = this.onKeyLeft.bind(this)
-    this.onKeyRight = this.onKeyRight.bind(this)
-
     document.body.appendChild(this.element)
     document.addEventListener('keyup', this.onKeyUp)
-    document.addEventListener('keyup', this.onKeyLeft)
-    document.addEventListener('keyup', this.onKeyRight)
   }
 
   loadImage(url, alt) {
@@ -140,24 +133,17 @@ class Lightbox {
   }
 
   onKeyUp(e) {
-    if (e.key === 'Escape') {
-      this.close(e)
+    switch (e.key) {
+      case 'Escape':
+        this.close(e)
+        break
+      case 'ArrowLeft':
+        this.prev(e)
+        break
+      case 'ArrowRight':
+        this.next(e)
     }
   }
-
-  onKeyLeft(e) {
-    if (e.key === 'ArrowLeft') {
-      this.prev(e)
-    }
-  }
-
-  onKeyRight(e) {
-    if (e.key === 'ArrowRight') {
-      this.next(e)
-    }
-  }
-
-
 
   close(e) {
     e.preventDefault()
@@ -180,7 +166,7 @@ class Lightbox {
     dom
       .querySelector('.lightbox__close')
       .addEventListener('click', this.close.bind(this))
-      
+
     dom
       .querySelector('.lightbox__next')
       .addEventListener('click', this.next.bind(this))
@@ -192,5 +178,3 @@ class Lightbox {
 }
 
 export default Lightbox
-
-// ${factoryLB(url)}

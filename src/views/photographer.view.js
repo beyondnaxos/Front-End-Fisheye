@@ -32,9 +32,6 @@ class PhotographerView {
 
     this.mediaTitle = document.createElement('h2')
     this.mediaTitle.classList.add('media-title')
-
-    // this.headerTitle.innerText = "Photographer";
-    // this.heading.addEventListener("click", controller);
   }
 
   displayPhotographerInfo(photographer) {
