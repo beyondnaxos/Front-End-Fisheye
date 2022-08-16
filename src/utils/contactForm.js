@@ -16,14 +16,12 @@ function displayModal() {
   const modalTitle = document.querySelector('.modal-title')
   const headingName = document.querySelector('.heading-name').textContent
 
-  modalTitle.innerText += ` ${headingName}`
+  modalTitle.innerText = `Contactez moi ${headingName}`
 }
 
 function closeModal() {
   const modal = document.getElementById('contact_modal')
-  const modalTitle = document.querySelector('.modal-title')
   modal.style.display = 'none'
-  modalTitle.innerHTML = 'Contactez-moi'
 }
 
 const contactForm = document.querySelector('.contact-form')

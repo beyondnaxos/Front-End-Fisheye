@@ -4,6 +4,7 @@ export default class VideoMedia {
     this.video = elt.video
     this.likes = elt.likes
     this.id = elt.photographerId
+    this.liked = false
   }
 
   displayInList() {
@@ -17,7 +18,7 @@ export default class VideoMedia {
         <div class='figcaption-container'>
         <figcaption>${this.title}</figcaption>
         <p class='media-likes-count'>${this.likes} </p>
-        <img src='../assets/icons/heart.svg' class='heart-icon' alt='heart'>
+        <img src='../assets/icons/heart.svg'  class='heart-icon' alt='heart'>
         </div>
         </figure>
         `

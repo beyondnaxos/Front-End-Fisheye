@@ -19,11 +19,12 @@ const PhotographerController = async (model, view) => {
   }
 
   baseDisplay(model)
-  
+
   view.inputSelect.addEventListener('change', function (e) {
     Sort.init(e.target.value, model.medias)
     Lightbox.init()
     Like.init()
+    // Like.sort(model.medias)
   })
 
   console.log('clg de model')

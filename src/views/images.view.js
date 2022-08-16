@@ -4,6 +4,7 @@ export default class ImageMedia {
     this.image = elt.image
     this.likes = elt.likes
     this.id = elt.photographerId
+    
   }
 
   displayInList() {
@@ -14,7 +15,7 @@ export default class ImageMedia {
             <div class='figcaption-container'>
             <figcaption>${this.title}</figcaption>
             <p class='media-likes-count'>${this.likes}</p>
-            <img src='../assets/icons/heart.svg' class='heart-icon' alt='heart'>
+            <img src='../assets/icons/heart.svg'  class='heart-icon' alt='heart'>
             </div>
         </figure>
         `

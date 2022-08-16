@@ -79,7 +79,10 @@ class PhotographerView {
         'onclick',
         `location.href='media.html?id=${media.id}'`
       )
+      // heartIcon.setAttribute('contenteditable', 'false')
+
       const multimedia = factory(media)
+
       this.mediasContainer.innerHTML += multimedia.displayInList()
     })
   }
