@@ -1,10 +1,11 @@
 // import heart.svg
 
 class Sort {
-  static init(e, mediasFromView) {
+  static init(sortValue, mediasFromView) {
     const mediaContainer = document.querySelector('.medias-container')
     const medias = mediasFromView
-    const property = e.target.value
+    const property = sortValue
+
     const sort = new Sort(medias, property, mediaContainer)
     console.log(medias)
     sort.sortBy(property)
