@@ -51,7 +51,7 @@ class PhotographerView {
     this.inputLabel.innerText = 'Trier par'
     this.inputLabel.setAttribute('aria-aria-labelledby', 'trier-par')
     this.inputLabel.classList.add('sort-label')
-    this.inputOptionFirst.innerText = 'Popoularité'
+    this.inputOptionFirst.innerText = 'Popularité'
     this.inputOptionFirst.setAttribute('value', 'popularity')
     this.inputOptionFirst.classList.add('popularité')
     this.inputOptionSecond.innerText = 'Date'

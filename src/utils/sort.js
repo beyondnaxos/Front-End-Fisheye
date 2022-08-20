@@ -38,9 +38,9 @@ class Sort {
     
             <img height='300' width='350' class="media-card media-image" src="../assets/medias/${media.photographerId}/${media.image}" alt="${media.title}" muted>      
             <div class='figcaption-container'>
-            <figcaption>${media.title}</figcaption>
-            <h4 class='media-likes-count'>${media.likes} </h4>
-            <img src='../assets/icons/heart.svg' class='heart-icon' alt='heart'>
+            <figcaption aria-label='titre de la photo ${media.title}'>${media.title}</figcaption>
+            <h4 class='media-likes-count' aria-label='nombre de likes ${media.likes}'>${media.likes} </h4>
+            <img src='../assets/icons/heart.svg' aria-label='bouton ajouter un like' class='heart-icon' alt='heart'>
             </div>
         </figure>
         `
@@ -51,9 +51,9 @@ class Sort {
           Your browser does not support the video tag.
       </video>
       <div class='figcaption-container'>
-      <figcaption>${media.title}</figcaption>
-      <h4 class='media-likes-count'>${media.likes} </h4>
-      <img src='../assets/icons/heart.svg' class='heart-icon' alt='heart'>
+      <figcaption aria-label='titre de la vidéo ${media.title}'>${media.title}</figcaption>
+      <h4 class='media-likes-count' aria-label='nombre de likes ${media.likes}' >${media.likes} </h4>
+      <img src='../assets/icons/heart.svg' class='heart-icon' aria-label='bouton ajouter un like' alt='heart'>
       </div>
       </figure>
       `

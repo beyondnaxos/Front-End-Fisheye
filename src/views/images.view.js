@@ -10,12 +10,12 @@ export default class ImageMedia {
   displayInList() {
     return `<figure>
 
-            <img height='300' width='350' class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
+            <img height='300' aria-label='photo de ${this.title} ' width='350' class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
 
             <div class='figcaption-container'>
-            <figcaption>${this.title}</figcaption>
-            <h2 class='media-likes-count'>${this.likes}</h2>
-            <img src='../assets/icons/heart.svg'  class='heart-icon' alt='heart'>
+            <figcaption aria-label='titre de la photo ${this.title}' >${this.title}</figcaption>
+            <h2 class='media-likes-count' aria-label='nombre de likes ${this.likes}'>${this.likes}</h2>
+            <img src='../assets/icons/heart.svg'  aria-label='bouton ajouter un like' class='heart-icon' alt='heart'>
             </div>
         </figure>
         `
