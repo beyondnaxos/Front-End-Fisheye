@@ -12,10 +12,10 @@ function displayModal() {
   modal.style.padding = '50px'
   modal.style.border = '1px solid #ccc'
   modal.style.borderRadius = '10px'
-  modal.style.backgroundColor = 'white'
+  modal.style.backgroundColor = 'rgba(255, 255, 255, 0.6)'
   const modalTitle = document.querySelector('.modal-title')
   const headingName = document.querySelector('.heading-name').textContent
-  modalTitle.innerText = `Contactez moi ${headingName}`
+  modalTitle.innerHTML = `Contactez moi </br> ${headingName}`
 }
 
 function closeModal() {
@@ -43,17 +43,11 @@ contactForm.addEventListener('submit', (e) => {
   closeModal()
 })
 
-
-
-
-function closeModalEscape(e) {
+const keydownpressed = 'keydown'
+// when the user press escape key, close the modal
+document.addEventListener(keydownpressed, (e) => {
   if (e.key === 'Escape') {
     closeModal()
   }
 }
-
-const escButton = document.querySelector('.close')
-
-escButton.addEventListener('keydown', (e) => { 
-  if (e.key === 'Escape') {}
-})
+)

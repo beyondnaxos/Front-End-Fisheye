@@ -27,6 +27,7 @@ export function photographerFactory(data) {
     const img = document.createElement('img')
     img.setAttribute('src', picture)
     img.setAttribute('aria-label', `photo de ${name}`)
+    img.classList.add('pp-photographer')
 
     const h2 = document.createElement('h2')
     h2.textContent = name

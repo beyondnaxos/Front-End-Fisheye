@@ -35,7 +35,8 @@ class Sort {
   buildDom(media) {
     if (media.image) {
       return `<figure>
-            <img class="media-card media-image" src="../assets/medias/${media.photographerId}/${media.image}" alt="${media.title}" muted>        
+    
+            <img height='300' width='350' class="media-card media-image" src="../assets/medias/${media.photographerId}/${media.image}" alt="${media.title}" muted>      
             <div class='figcaption-container'>
             <figcaption>${media.title}</figcaption>
             <h4 class='media-likes-count'>${media.likes} </h4>
@@ -45,7 +46,7 @@ class Sort {
         `
     } else {
       return `<figure>   
-      <video class=" media-card media-video" width="300" height="300" src="../assets/medias/${media.photographerId}/${media.video}" alt=${media.title} muted>
+      <video  height='300' width='350' class=" media-card media-video" width="300" height="300" src="../assets/medias/${media.photographerId}/${media.video}" alt=${media.title} muted>
           <source  src="../assets/medias/${media.photographerId}/${media.video}" type="video/mp4">
           Your browser does not support the video tag.
       </video>

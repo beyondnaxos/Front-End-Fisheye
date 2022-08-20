@@ -1,4 +1,3 @@
-
 class Lightbox {
   static init() {
     const links = Array.from(
@@ -46,7 +45,7 @@ class Lightbox {
     const image = new Image()
     const container = this.element.querySelector('.lightbox__container')
     const loader = document.createElement('div')
-    const caption = document.createElement('p')
+    const caption = document.createElement('h2')
     const figContainer = document.createElement('div')
     figContainer.appendChild(image)
     caption.classList.add('lightbox__caption')
@@ -63,6 +62,7 @@ class Lightbox {
       this.alt = alt
     }
     image.src = url
+    image.alt = ""
   }
 
   loadVideo(url, alt) {
@@ -98,6 +98,7 @@ class Lightbox {
     video.setAttribute('alt', alt)
     this.url = url
     video.src = url
+    video.alt = ""
     video.innerHTML = `<source src="${url}" type="video/mp4">`
   }
 
@@ -157,6 +158,9 @@ class Lightbox {
   buildDOM(url) {
     const dom = document.createElement('div')
     dom.classList.add('lightbox')
+
+    dom.setAttribute('aria-label', 'image closeup view')
+
     dom.innerHTML = `
             <button class="lightbox__close">Fermer</button>
             <button class="lightbox__next">Suivant</button>

@@ -9,9 +9,9 @@ export default class ImageMedia {
 
   displayInList() {
     return `<figure>
-        
-            <img class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
-        
+
+            <img height='300' width='350' class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
+
             <div class='figcaption-container'>
             <figcaption>${this.title}</figcaption>
             <h2 class='media-likes-count'>${this.likes}</h2>
