@@ -24,10 +24,12 @@ class Like {
       likesCount.innerHTML = parseInt(likesCount.innerHTML) - 1
       mediaLikesCount.innerHTML = parseInt(mediaLikesCount.innerHTML) - 1
       heartIcon.classList.remove('liked')
+      heartIcon.classList.remove('blue')
     } else {
       likesCount.innerHTML = parseInt(likesCount.innerHTML) + 1
       mediaLikesCount.innerHTML = parseInt(mediaLikesCount.innerHTML) + 1
       heartIcon.classList.add('liked')
+      heartIcon.classList.add('blue')
     }
   }
 }

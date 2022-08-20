@@ -17,7 +17,7 @@ export default class VideoMedia {
    
         <div class='figcaption-container'>
         <figcaption>${this.title}</figcaption>
-        <p class='media-likes-count'>${this.likes} </p>
+        <h4 class='media-likes-count'>${this.likes} </h4>
         <img src='../assets/icons/heart.svg'  class='heart-icon' alt='heart'>
         </div>
         </figure>

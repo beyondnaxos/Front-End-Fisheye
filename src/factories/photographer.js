@@ -10,6 +10,20 @@ export function photographerFactory(data) {
       `location.href='photographer.html?id=${id}'`
     )
 
+    // accesibility with keyboard 
+    article.setAttribute('tabindex', '0')
+    article.setAttribute('role', 'button')
+    article.setAttribute('aria-label', `Voir la fiche de ${name}`)
+    article.setAttribute('data-id', id)
+
+    article.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        location.href = `photographer.html?id=${id}`
+      }
+    }
+    )
+
+    
     const img = document.createElement('img')
     img.setAttribute('src', picture)
     img.setAttribute('aria-label', `photo de ${name}`)

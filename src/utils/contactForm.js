@@ -15,7 +15,6 @@ function displayModal() {
   modal.style.backgroundColor = 'white'
   const modalTitle = document.querySelector('.modal-title')
   const headingName = document.querySelector('.heading-name').textContent
-
   modalTitle.innerText = `Contactez moi ${headingName}`
 }
 
@@ -42,4 +41,19 @@ contactForm.addEventListener('submit', (e) => {
     console.log(`${key}: ${value}`)
   }
   closeModal()
+})
+
+
+
+
+function closeModalEscape(e) {
+  if (e.key === 'Escape') {
+    closeModal()
+  }
+}
+
+const escButton = document.querySelector('.close')
+
+escButton.addEventListener('keydown', (e) => { 
+  if (e.key === 'Escape') {}
 })

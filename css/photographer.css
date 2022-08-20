@@ -20,6 +20,8 @@ header {
     width: 1240px;
 }
 
+
+
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
@@ -36,6 +38,24 @@ header {
     justify-content: center;
 }
 
+.heading-name {
+    font-size: 64px;
+    color: #D3573C;
+    margin: 0;
+}
+
+.heading-text {
+    font-size: 24px;
+    color: #901C1C;
+    margin-top: 10px ;
+}
+
+.heading-sub {
+    font-size: 16px;
+    color:#525252;
+    /* margin: 0; */
+}
+
 .contact_button {
     font-size: 20px;
     font-weight: bold;
@@ -47,6 +67,12 @@ header {
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.contact_button:hover {
+    background-color: #DB8876;
+    color: black;
 }
 
 .modal {
@@ -127,6 +153,7 @@ form input {
 .media-card {
     height: 300px;
     width: 350px;
+    border-radius: 10px;
 }
 
 .media-image, .media-video {
@@ -309,13 +336,22 @@ figure {
 
 select {
     background: #901C1C;
+    display: inline-block;
     color: white;
-    height: 35px;
-    width: 100px;
+    /* height: 35px; */
+    /* width: 100px; */
     border: none;
     border-radius: 5px;
-
+    font-size: 18px;
+    padding: 15px;
 }
+
+
+option {
+   
+    font-size: 18px;
+}
+
 
 .sort-container {
     margin-top: 30px;
@@ -327,9 +363,6 @@ select {
     margin-right: 10px;
 }
 
-select:focus {}
-
-/* add hear.svg on .heartLike */
 .heartLike {
     background: url(../assets/icons/heart.svg) center center / 100% 100% no-repeat;
     border: none;
@@ -341,5 +374,17 @@ select:focus {}
 .heart-icon {
     width: 25px;
     height: 25px;
+    transition: ease-in-out .2s all;; 
+    /* filter: hue-rotate(0); */
 
+}
+
+.blue {
+    filter: hue-rotate(250deg) !important;
+    transform: scale(1.2) !important;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .2s;
+}
+
+media-likes-count {
+    margin: 0;
 }

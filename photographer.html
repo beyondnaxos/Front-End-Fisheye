@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
@@ -9,45 +9,36 @@
     <title>Fisheye - photographe </title>
   </head>
   <body>
+
     <header>
-      <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="logo fichaille"/></a>
+      <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/></a>
     </header>
+
     <main id="main">
       <section class="photograph-header" aria-label="Informations sur le photographe" >
         <div class="heading-infos-container">
           <h1 class="heading-name"></h1>
-          <h3 class="heading-text"></h2>
-          <h3 class="heading-sub"></h2>
+          <h2 class="heading-text"></h2>
+          <h2 class="heading-sub"></h2>
         </div>
-        <img class="heading-image" >
+        <img class="heading-image" aria-label ="Photo de profil du photographe" >
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </section>
-      <div class='sort-container'aria-label="Input trier par">
-      
-        
-     </div>
 
-
-     
-     
+      <div class='sort-container' style='display: flex; align-items: center; 'id="trier-par" aria-label="Input trier par"></div>
     </main>
     <section class="medias-container" aria-label="Navigation liste des médias du photographe"> 
       
     </section>
 
-    <!-- <div id="lightbox">
-      <div class="content">
-        
-      </div> -->
-
     </div>
 
     <div class="count-container">
      <div class="likes">
-       <h3 class="likes-count"></h3>
-       <img  class='heart' src="./assets/images/heart.png" class="heart" />
+       <h3 class="likes-count" aria-label="'nombre de likes"></h3>
+       <img  class='heart' aria-label='icône ajouter un like' src="./assets/images/heart.png" class="heart" />
      </div>
-     <p class="daily-price"></p>
+     <h4 class="daily-price" aria-label="tarif journalier"></h4>
     </div>
     
     <div id="contact_modal">
@@ -55,40 +46,44 @@
         <header>
           <h2 class='modal-title'>Contactez-moi</h2>
           
-          <img src="assets/icons/close.svg" class='close' onclick="closeModal()" />
+          <img src="assets/icons/close.svg" alt='close button' aria-label="Icone de fermeture de la modale" class='close' onclick="closeModal()" onkeypress="closeModalEscape(e)"/>
         </header>
 
 
-				<form class='contact-form' action="" method="get">
+				<form class='contact-form' aria-label="contact information" action="" method="get">
           <div>
-            <label for="firstname">Prénom</label>
+            <label id='Prénom' for="firstname">Prénom</label>
 						<input 
+            aria-labelledby="Prénom"
             id="firstname" 
             name='firstname' 
             type="text" />
 					</div>
           <div>
-            <label for='name'>Nom</label>
+            <label id='Nom' for='name'>Nom</label>
 						<input 
+            aria-labelledby="Nom"
             id="name"
             name='name' 
             type="text" />
 					</div>
           <div>
-            <label for="email">Email</label>
+            <label id='Email'for="email">Email</label>
 						<input 
+            aria-labelledby="Email"
             id="email"
             name="email"
             type="email" />
 					</div>
           <div>
-            <label for='message'>Message</label>
+            <label id='Message' for='message'>Message</label>
 						<input 
+            aria-labelledby="Message"
             id="message"
             name="message" 
             type="text" />
 					</div>
-          <button type='submit' id='form-button' class="contact_button">Envoyer</button>
+          <button aria-label="Bouton envoyer le formulaire" type='submit' id='form-button' class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>

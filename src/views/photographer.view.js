@@ -15,9 +15,10 @@ class PhotographerView {
     this.sortContainer = document.querySelector('.sort-container')
 
     this.inputLabel = document.createElement('label')
-    this.inputLabel.setAttribute('for', 'select')
+    this.inputLabel.setAttribute('for', 'sort-select')
 
     this.inputSelect = document.createElement('select')
+    this.inputSelect.setAttribute('id', 'sort-select')
     this.inputOptionFirst = document.createElement('option')
     this.inputOptionSecond = document.createElement('option')
     this.inputOptionThird = document.createElement('option')
@@ -44,9 +45,11 @@ class PhotographerView {
       'src',
       `../../assets/photographers/${photographer.portrait}`
     )
+
     this.headingImg.setAttribute('alt', photographer.name)
     this.headingImg.classList.add('photographer-img')
     this.inputLabel.innerText = 'Trier par'
+    this.inputLabel.setAttribute('aria-aria-labelledby', 'trier-par')
     this.inputLabel.classList.add('sort-label')
     this.inputOptionFirst.innerText = 'Popoularité'
     this.inputOptionFirst.setAttribute('value', 'popularity')
