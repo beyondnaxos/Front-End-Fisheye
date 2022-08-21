@@ -23,6 +23,20 @@ class Lightbox {
         )
       })
     )
+    links.forEach((link) =>
+      link.addEventListener('keydown', (e) => {
+      if ( e.key === 'Enter')
+        {  e.preventDefault()
+        console.log(link)
+        new Lightbox(
+          e.currentTarget.getAttribute('src'),
+          gallery,
+          alts,
+          e.currentTarget.getAttribute('alt'),
+          alts
+        )}
+      })
+    )
   }
 
   constructor(url, gallery, alts, alt) {

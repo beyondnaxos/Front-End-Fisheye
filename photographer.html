@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+  <head tabindex="-1">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -22,12 +22,12 @@
           <h2 class="heading-sub"></h2>
         </div>
         <img class="heading-image" aria-label ="Photo de profil du photographe" >
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button" tabindex="1" onclick="displayModal()">Contactez-moi</button>
       </section>
 
-      <div class='sort-container' style='display: flex; align-items: center; 'id="trier-par" aria-label="Input trier par"></div>
+      <div class='sort-container' tabindex='1' style='display: flex; align-items: center; 'id="trier-par" aria-label="Input trier par"></div>
     </main>
-    <section class="medias-container" tabindex="2" aria-label="Navigation liste des médias du photographe"> 
+    <section class="medias-container" tabindex="1" aria-label="Navigation liste des médias du photographe"> 
       
     </section>
 

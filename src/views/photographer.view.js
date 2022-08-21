@@ -22,6 +22,7 @@ class PhotographerView {
     this.inputOptionFirst = document.createElement('option')
     this.inputOptionSecond = document.createElement('option')
     this.inputOptionThird = document.createElement('option')
+  
     
     this.mediasContainer = document.querySelector('.medias-container')
     this.mediaCard = document.createElement('article')
@@ -61,6 +62,7 @@ class PhotographerView {
     this.inputSelect.appendChild(this.inputOptionFirst)
     this.inputSelect.appendChild(this.inputOptionSecond)
     this.inputSelect.appendChild(this.inputOptionThird)
+    this.inputSelect.setAttribute('tabindex', '1')
 
     this.headingInfosContainer.appendChild(this.headingTitle)
     this.headingInfosContainer.appendChild(this.headingText)
