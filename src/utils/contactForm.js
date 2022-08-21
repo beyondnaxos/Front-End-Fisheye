@@ -1,10 +1,18 @@
 function displayModal() {
   const modal = document.getElementById('contact_modal')
   const main = document.querySelector('main')
+  const section = document.querySelector('.medias-container')
+  const countContainer = document.querySelector('.count-container')
   const  body = document.querySelector('body')
   body.classList.add('no-scroll')
   main.setAttribute('aria-hidden', 'true')
+  countContainer.setAttribute('aria-hidden', 'true')
+  section.setAttribute('aria-hidden', 'true')
+  main.setAttribute('tabindex', '-1')
+  section.setAttribute('tabindex', '-1')
   modal.setAttribute('aria-hidden', 'false')
+  modal.setAttribute('tabindex', '1')
+  
   modal.style.display = 'block'
   modal.style.width = '100%'
   modal.style.height = '100vh'
@@ -26,8 +34,16 @@ function displayModal() {
 function closeModal() {
   const main = document.querySelector('main')
   const modal = document.getElementById('contact_modal')
+  const section = document.querySelector('.medias-container')
+  const countContainer = document.querySelector('.count-container')
   main.setAttribute('aria-hidden', 'false')
+  countContainer.setAttribute('aria-hidden', 'false')
+  section.setAttribute('aria-hidden', 'false')
+  main.setAttribute('tabindex', '1')
+  section.setAttribute('tabindex', '1')
   modal.setAttribute('aria-hidden', 'true')
+  
+
   const  body = document.querySelector('body')
   body.classList.remove('no-scroll')
   modal.style.display = 'none'
