@@ -14,9 +14,9 @@
       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/></a>
     </header>
 
-    <main id="main" aria-hidden="false">
+    <main id="main" aria-hidden="false" tabindex="1">
       <section class="photograph-header" aria-label="Informations sur le photographe" >
-        <div class="heading-infos-container">
+        <div class="heading-infos-container" tabindex="1">
           <h1 class="heading-name"></h1>
           <h2 class="heading-text"></h2>
           <h2 class="heading-sub"></h2>
@@ -27,7 +27,7 @@
 
       <div class='sort-container' style='display: flex; align-items: center; 'id="trier-par" aria-label="Input trier par"></div>
     </main>
-    <section class="medias-container" aria-label="Navigation liste des médias du photographe"> 
+    <section class="medias-container" tabindex="2" aria-label="Navigation liste des médias du photographe"> 
       
     </section>
 
@@ -41,7 +41,7 @@
      <h4 class="daily-price" aria-label="tarif journalier"></h4>
     </div>
     
-    <div id="contact_modal" role='dialog' aria-hidden="true" >
+    <div id="contact_modal" role='dialog' aria-hidden="true" tabindex="-1" >
       <div class="modal" >
         <header>
           <h2 class='modal-title'>Contactez-moi</h2>

@@ -34,26 +34,26 @@ class Sort {
 
   buildDom(media) {
     if (media.image) {
-      return `<figure>
+      return `<figure aria-label='figure de ${media.title}' role="figure" aria-labelledby=${media.title} tabindex='1'>
     
-            <img height='300' width='350' class="media-card media-image" src="../assets/medias/${media.photographerId}/${media.image}" alt="${media.title}" muted>      
+            <img  tabindex='1' id=${media.title} height='300' width='350' class="media-card media-image" src="../assets/medias/${media.photographerId}/${media.image}" alt="${media.title}" muted>      
             <div class='figcaption-container'>
-            <figcaption aria-label='titre de la photo ${media.title}'>${media.title}</figcaption>
-            <h4 class='media-likes-count' aria-label='nombre de likes ${media.likes}'>${media.likes} </h4>
-            <img src='../assets/icons/heart.svg' aria-label='bouton ajouter un like' class='heart-icon' alt='heart'>
+            <figcaption tabindex='1' aria-label='titre de la photo ${media.title}'>${media.title}</figcaption>
+            <h4 tabindex='1' class='media-likes-count' aria-label='nombre de likes ${media.likes}'>${media.likes} </h4>
+            <img tabindex='1' src='../assets/icons/heart.svg' aria-label='bouton ajouter un like' class='heart-icon' alt='heart'>
             </div>
         </figure>
         `
     } else {
-      return `<figure>   
-      <video  height='300' width='350' class=" media-card media-video" width="300" height="300" src="../assets/medias/${media.photographerId}/${media.video}" alt=${media.title} muted>
+      return `<figure aria-label='figure de ${media.title}' role="figure" aria-labelledby=${media.title} tabindex='1'>   
+      <video  tabindex='1' id=${media.title} height='300' width='350' class=" media-card media-video" width="300" height="300" src="../assets/medias/${media.photographerId}/${media.video}" alt=${media.title} muted>
           <source  src="../assets/medias/${media.photographerId}/${media.video}" type="video/mp4">
           Your browser does not support the video tag.
       </video>
       <div class='figcaption-container'>
-      <figcaption aria-label='titre de la vidéo ${media.title}'>${media.title}</figcaption>
-      <h4 class='media-likes-count' aria-label='nombre de likes ${media.likes}' >${media.likes} </h4>
-      <img src='../assets/icons/heart.svg' class='heart-icon' aria-label='bouton ajouter un like' alt='heart'>
+      <figcaption tabindex='1' aria-label='titre de la vidéo ${media.title}'>${media.title}</figcaption>
+      <h4 tabindex='1' class='media-likes-count' aria-label='nombre de likes ${media.likes}' >${media.likes} </h4>
+      <img tabindex='1' src='../assets/icons/heart.svg' class='heart-icon' aria-label='bouton ajouter un like' alt='heart'>
       </div>
       </figure>
       `

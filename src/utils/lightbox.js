@@ -50,6 +50,7 @@ class Lightbox {
     const caption = document.createElement('h2')
     const figContainer = document.createElement('div')
     figContainer.appendChild(image)
+    figContainer.setAttribute('aria-label', this.alt)
     caption.classList.add('lightbox__caption')
     figContainer.appendChild(caption)
     caption.innerHTML = this.alt
@@ -79,6 +80,7 @@ class Lightbox {
     const caption = document.createElement('p')
     caption.classList.add('lightbox__caption')
     const figContainer = document.createElement('div')
+    figContainer.setAttribute('aria-label', this.alt)
     figContainer.appendChild(video)
     figContainer.appendChild(caption)
     caption.innerHTML = this.alt

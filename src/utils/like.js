@@ -8,12 +8,17 @@ class Like {
   static init() {
     const heartIcons = document.querySelectorAll('.heart-icon')
     heartIcons.forEach((heartIcon) => {
+      const parent = heartIcon.parentElement
+      const mediaLikesCount = parent.querySelector('.media-likes-count')
       heartIcon.addEventListener('click', (e) => {
         e.preventDefault()
-        const parent = heartIcon.parentElement
-        const mediaLikesCount = parent.querySelector('.media-likes-count')
-        console.log(heartIcon)
         Like.like(mediaLikesCount, heartIcon)
+      })
+      heartIcon.addEventListener('keydown', (e) => {
+        if (e.key == 'Enter') {
+        e.preventDefault()
+        Like.like(mediaLikesCount, heartIcon)
+        }
       })
     })
   }
