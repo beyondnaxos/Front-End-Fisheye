@@ -16,14 +16,13 @@ class PhotographerView {
 
     this.inputLabel = document.createElement('label')
     this.inputLabel.setAttribute('for', 'sort-select')
-      this.inputLabel.setAttribute('aria-aria-labelledby', 'trier-par')
+    this.inputLabel.setAttribute('aria-aria-labelledby', 'trier-par')
     this.inputSelect = document.createElement('select')
     this.inputSelect.setAttribute('id', 'sort-select')
     this.inputOptionFirst = document.createElement('option')
     this.inputOptionSecond = document.createElement('option')
     this.inputOptionThird = document.createElement('option')
-  
-    
+
     this.mediasContainer = document.querySelector('.medias-container')
     this.mediaCard = document.createElement('article')
     this.mediaCard.classList.add('media-card')
@@ -37,7 +36,6 @@ class PhotographerView {
   }
 
   displayPhotographerInfo(photographer) {
-    console.log(photographer)
     this.headingTitle.innerText = photographer.name
     this.headingText.innerText = photographer.city + ', ' + photographer.country
     this.headingSubText.innerText = photographer.tagline

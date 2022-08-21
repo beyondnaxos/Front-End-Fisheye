@@ -23,7 +23,6 @@ class PhotographerModel {
     this.price = photographer.price
     this.portrait = photographer.portrait
     this.medias = await APICalls.fetchMedias(this.id)
-    console.log(this)
     this.totalLikes = this.medias?.reduce((acc, media) => {
       return acc + media.likes
     }, 0)

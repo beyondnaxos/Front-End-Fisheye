@@ -16,8 +16,8 @@ class Like {
       })
       heartIcon.addEventListener('keydown', (e) => {
         if (e.key == 'Enter') {
-        e.preventDefault()
-        Like.like(mediaLikesCount, heartIcon)
+          e.preventDefault()
+          Like.like(mediaLikesCount, heartIcon)
         }
       })
     })

@@ -5,15 +5,12 @@ class Lightbox {
         'img:not(.logo):not(.heading-image):not(.close):not(.heart):not(.heart-icon), video'
       )
     )
-    console.log(links)
     const gallery = links.map((link) => link.getAttribute('src'))
-    console.log(gallery)
     const alts = links.map((link) => link.getAttribute('alt'))
 
     links.forEach((link) =>
       link.addEventListener('click', (e) => {
         e.preventDefault()
-        console.log(link)
         new Lightbox(
           e.currentTarget.getAttribute('src'),
           gallery,
@@ -27,7 +24,6 @@ class Lightbox {
       link.addEventListener('keydown', (e) => {
       if ( e.key === 'Enter')
         {  e.preventDefault()
-        console.log(link)
         new Lightbox(
           e.currentTarget.getAttribute('src'),
           gallery,
@@ -71,7 +67,6 @@ class Lightbox {
     loader.classList.add('lightbox__loader')
     container.innerHTML = ''
     container.appendChild(loader)
-    console.log(url)
     image.onload = () => {
       container.removeChild(loader)
       container.appendChild(figContainer)
@@ -85,7 +80,6 @@ class Lightbox {
   loadVideo(url, alt) {
     this.alt = alt
     this.url = null
-    console.log(this.alt)
     const video = document.createElement('video')
     const container = this.element.querySelector('.lightbox__container')
     const main = document.querySelector('main')
@@ -124,7 +118,6 @@ class Lightbox {
 
   next(e) {
     e.preventDefault()
-    console.log(this.gallery)
     let i = this.gallery.findIndex((image) => image === this.url)
 
     if (i === this.gallery.length - 1) {
@@ -136,12 +129,10 @@ class Lightbox {
     } else {
       this.loadImage(this.gallery[i + 1], this.alts[i + 1])
     }
-    console.log(i)
   }
 
   prev(e) {
     e.preventDefault()
-    console.log(this.gallery)
     let i = this.gallery.findIndex((image) => image === this.url)
     if (i === 0) {
       i = this.gallery.length

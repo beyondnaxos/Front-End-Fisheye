@@ -4,7 +4,6 @@ export default class ImageMedia {
     this.image = elt.image
     this.likes = elt.likes
     this.id = elt.photographerId
-    
   }
 
   displayInList() {

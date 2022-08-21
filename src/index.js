@@ -5,7 +5,6 @@ const fetchPhotographers = async () => {
   const response = await fetch('../data/photographers.json')
   const photographersList = await response.json()
   photographers.push(...photographersList.photographers)
-  console.log(photographersList)
   return photographers
 }
 
