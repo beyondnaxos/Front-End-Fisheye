@@ -44,6 +44,8 @@ class Lightbox {
     this.url = null
     const image = new Image()
     const container = this.element.querySelector('.lightbox__container')
+    const main = document.querySelector('main')
+    main.setAttribute('aria-hidden', 'true')
     const loader = document.createElement('div')
     const caption = document.createElement('h2')
     const figContainer = document.createElement('div')
@@ -71,6 +73,8 @@ class Lightbox {
     console.log(this.alt)
     const video = document.createElement('video')
     const container = this.element.querySelector('.lightbox__container')
+    const main = document.querySelector('main')
+    main.setAttribute('aria-hidden', 'true')
     const loader = document.createElement('div')
     const caption = document.createElement('p')
     caption.classList.add('lightbox__caption')
@@ -149,6 +153,11 @@ class Lightbox {
   close(e) {
     e.preventDefault()
     this.element.classList.add('fadeOut')
+    const body = document.querySelector('body')
+    body.classList.remove('no-scroll')
+    const main = document.querySelector('main')
+    main.setAttribute('aria-hidden', 'false')
+
     window.setTimeout(() => {
       this.element.parentElement.removeChild(this.element)
     }, 500)
@@ -156,6 +165,8 @@ class Lightbox {
   }
 
   buildDOM(url) {
+    const body = document.querySelector('body')
+    body.classList.add('no-scroll')
     const dom = document.createElement('div')
     dom.classList.add('lightbox')
 

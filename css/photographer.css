@@ -252,6 +252,11 @@ figcaption {
     font-weight: 500;
 }
 
+
+.no-scroll {
+    overflow: hidden;
+    
+}
 .lightbox {
     position: fixed;
     top: 0;

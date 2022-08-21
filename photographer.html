@@ -14,7 +14,7 @@
       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/></a>
     </header>
 
-    <main id="main">
+    <main id="main" aria-hidden="false">
       <section class="photograph-header" aria-label="Informations sur le photographe" >
         <div class="heading-infos-container">
           <h1 class="heading-name"></h1>
@@ -41,8 +41,8 @@
      <h4 class="daily-price" aria-label="tarif journalier"></h4>
     </div>
     
-    <div id="contact_modal">
-      <div class="modal">
+    <div id="contact_modal" role='dialog' aria-hidden="true" >
+      <div class="modal" >
         <header>
           <h2 class='modal-title'>Contactez-moi</h2>
           
@@ -50,7 +50,7 @@
         </header>
 
 
-				<form class='contact-form' aria-label="contact information" action="" method="get">
+				<form class='contact-form' role='form' aria-label="contact information" action="" method="get">
           <div>
             <label id='Prénom' for="firstname">Prénom</label>
 						<input 
