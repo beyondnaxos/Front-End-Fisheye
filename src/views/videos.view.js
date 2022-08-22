@@ -8,7 +8,7 @@ export default class VideoMedia {
   }
 
   displayInList() {
-    return `<figure aria-label='figure de ${this.title}' role="figure" aria-label=${this.title} tabindex='1'>
+    return `<figure aria-label='figure de ${this.title}' role="figure" aria-label=${this.title} tabindex='-1'>
        
         <video tabindex='1' id=${this.title} height='300' width='350' aria-label='ouverture de la lightbox' class=" media-card media-video" width="300" height="300" alt="${this.title}" src="../assets/medias/${this.id}/${this.video}" >
             <source  src="../assets/medias/${this.id}/${this.video}" type="video/mp4">
@@ -16,7 +16,7 @@ export default class VideoMedia {
         </video>
    
         <div class='figcaption-container'>
-        <figcaption  tabindex='1' aria-label='titre de la vidéo ${this.title}'>${this.title}</figcaption>
+        <figcaption  tabindex='-1' aria-label='titre de la vidéo ${this.title}'>${this.title}</figcaption>
         <h4  tabindex='1' class='media-likes-count' aria-label='nombre de likes ${this.likes}'>${this.likes} </h4>
         <img tabindex='1' src='../assets/icons/heart.svg' role='button'  aria-label='bouton ajouter un like' class='heart-icon' alt='heart'>
         </div>

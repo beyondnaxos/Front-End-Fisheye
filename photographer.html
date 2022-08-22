@@ -14,7 +14,7 @@
       <a href="index.html"><img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/></a>
     </header>
 
-    <main id="main" aria-hidden="false" tabindex="1">
+    <main id="main" aria-hidden="false" tabindex="-1">
       <section class="photograph-header" aria-label="Informations sur le photographe" >
         <div class="heading-infos-container" tabindex="1">
           <h1 class="heading-name"></h1>
@@ -25,7 +25,7 @@
         <button class="contact_button" tabindex="1" onclick="displayModal()">Contactez-moi</button>
       </section>
 
-      <div class='sort-container' tabindex='1' style='display: flex; align-items: center; 'id="trier-par" aria-label="Input trier par"></div>
+      <div class='sort-container' tabindex='-1' style='display: flex; align-items: center; 'id="trier-par" aria-label="Input trier par"></div>
     </main>
     <section class="medias-container" tabindex="1" aria-hidden='false' aria-label="Navigation liste des médias du photographe"> 
       
@@ -33,13 +33,7 @@
 
     </div>
 
-    <div class="count-container" aria-hidden="false">
-     <div class="likes">
-       <h3 class="likes-count" aria-label="'nombre de likes"></h3>
-       <img  class='heart' aria-label='icône ajouter un like' src="./assets/images/heart.png" class="heart" />
-     </div>
-     <h4 class="daily-price" aria-label="tarif journalier"></h4>
-    </div>
+    
     
     <div id="contact_modal" role='dialog' aria-hidden="true" tabindex="-1" >
       <div class="modal" >
@@ -89,6 +83,14 @@
 				</form>
 			</div>
 		</div>
+
+    <div class="count-container" aria-hidden="false">
+      <div class="likes">
+        <h3 class="likes-count" tabindex='1' aria-label="'nombre de likes"></h3>
+        <img  class='heart'  aria-label='icône ajouter un like' src="./assets/images/heart.png" class="heart" />
+      </div>
+      <h4 class="daily-price" tabindex='1' aria-label="tarif journalier"></h4>
+     </div>
     
     <script  src="src/photographer.js" type="module"></script>
     <script src="src/utils/contactForm.js"></script>
