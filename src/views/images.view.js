@@ -9,7 +9,7 @@ export default class ImageMedia {
   displayInList() {
     return `<figure aria-label='figure de ${this.title}'  role="figure" tabindex='-1' aria-label=${this.title}>
 
-            <img tabindex='1' id=${this.title} height='300' aria-label='ouverture de la lightbox ' width='350' class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
+            <img tabindex='1' id=${this.title} height='300'  aria-label='Ouvrir la photo ${this.title}' width='350' class="media-card media-image" src="../assets/medias/${this.id}/${this.image}" alt="${this.title}">
 
             <div class='figcaption-container'>
             <figcaption tabindex='-1' aria-label='titre de la photo ${this.title}' >${this.title}</figcaption>

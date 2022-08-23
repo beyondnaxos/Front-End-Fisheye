@@ -98,9 +98,10 @@ class PhotographerView {
     this.likes = document.querySelector('.likes')
     this.likesCount = document.querySelector('.likes-count')
     this.dailyPrice = document.querySelector('.daily-price')
-
     this.likesCount.innerHTML = `${this.totalLikes}`
+    this.likesCount.setAttribute('aria-label', this.totalLikes + 'Likes')
     this.dailyPrice.textContent = `${photographer.price}€ / jour`
+    this.dailyPrice.setAttribute('aria-label', photographer.price+ '€ / jour')
 
     this.countContainer.appendChild(this.likes)
     this.likes.appendChild(this.likesCount)

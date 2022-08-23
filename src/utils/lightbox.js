@@ -195,6 +195,7 @@ class Lightbox {
     dom
       .querySelector('.lightbox__prev')
       .addEventListener('click', this.prev.bind(this))
+
     return dom
   }
 }
