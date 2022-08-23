@@ -10,8 +10,7 @@ class PhotographerModel {
     this.portrait
     this.medias = []
     this.totalLikes = 0
-    
-
+  
   }
 
   async getPhotographer() {
